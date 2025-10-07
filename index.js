@@ -2,6 +2,7 @@ import express from "express";
 import dotenv from "dotenv";
 import cors from "cors";
 import connectDB from "./config/db.js";
+import itemRoutes from "./routes/itemRoutes.js";
 
 dotenv.config();
 const app = express();
@@ -11,6 +12,7 @@ app.use(cors());
 app.use(express.json());
 
 // Routes
+app.use("/api/items", itemRoutes);
 
 // Connect DB and start server
 connectDB();
