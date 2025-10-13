@@ -4,8 +4,6 @@ const apiKey = 'sk-proj-4ifLEgaxFge2J3HtJmV4AW2xkfgiOPjZKUIj4cNMP3HpWUybWnZhFg9Z
 
 const openai = new OpenAI({apiKey});
 
-console.log('[apiKey]', process.env.OPENAI_API_KEY)
-
 export const extractExpense = async (req, res) => {
   const { text } = req.body;
 
